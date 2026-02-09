@@ -480,7 +480,7 @@ Exception
 
 ---
 
-### RuntimeException (VERY IMPORTANT ⭐⭐⭐)
+### RuntimeException
 
 `RuntimeException` represents **programming mistakes**.
 
@@ -562,7 +562,7 @@ An **Error** represents **serious system-level or JVM-level problems** that occu
 
 ### Important Point ⭐
 
-❌ Programmer **cannot recover** from Errors
+❌ Programmer **cannot recover** from Errors  
 ✔ System / Server administrator responsibility (e.g., increase heap memory)
 
 ---
@@ -580,7 +580,7 @@ Hence, catching Error is meant only for logging or shutdown, not for recovery.
 
 ---
 
-### Exception vs Error (VERY IMPORTANT)
+### Exception vs Error
 
 | Aspect       | Exception                 | Error                      |
 | ------------ | ------------------------- | -------------------------- |
@@ -592,7 +592,7 @@ Hence, catching Error is meant only for logging or shutdown, not for recovery.
 
 ---
 
-## 5. Complete Throwable Hierarchy (Reference)
+## 4.3. Complete Throwable Hierarchy (Reference)
 
 ```
 java.lang.Object
@@ -650,19 +650,9 @@ java.lang.Object
 
 ---
 
-## 5. Checked vs Unchecked Exceptions
+## 4.4. Checked vs Unchecked Exceptions
 
-This section explains:
-
-* What **checked** and **unchecked** exceptions are
-* Why the compiler checks some exceptions and ignores others
-* Fully checked vs partially checked exceptions
-
-This is one of the **most important sections** for exams and interviews.
-
----
-
-## 5.1 Checked Exceptions
+## 4.4.1 Checked Exceptions
 
 ### Definition
 
@@ -713,7 +703,7 @@ The compiler checks checked exceptions because:
 
 ---
 
-## 5.2 Unchecked Exceptions
+## 4.4.2 Unchecked Exceptions
 
 ### Definition
 
@@ -750,7 +740,7 @@ The compiler does not check unchecked exceptions because:
 
 ---
 
-## 5.3 Runtime vs Compile-Time (VERY IMPORTANT ⭐⭐⭐)
+## 4.4.3 Runtime vs Compile-Time
 
 ### Important Truth
 
@@ -772,7 +762,7 @@ handling rules are checked at **compile-time** for checked exceptions.
 
 ---
 
-## 5.4 Fully Checked vs Partially Checked Exceptions
+## 4.4.4 Fully Checked vs Partially Checked Exceptions
 
 ### Fully Checked Exception
 
@@ -814,7 +804,7 @@ Because:
 
 ---
 
-## 5.5 Summary Table (EXAM FAVORITE ⭐⭐⭐)
+## 4.4.5 Summary Table
 
 | Exception Type        | Category                    |
 | --------------------- | --------------------------- |

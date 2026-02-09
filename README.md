@@ -1,43 +1,70 @@
 # Core Java – Conceptwise Learning ☕🚀
 
-Welcome to the **Core Java Conceptwise Learning Repository**. This project is designed to help you master Core Java through structured, concept-focused programs and clear documentation.
+[![Java Version](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)]()
 
-## 🎯 Goal
-
-*   Build **strong Java fundamentals**.
-*   Write **clean, readable, and interview-ready code**.
-*   Understand **internal working mechanisms** (JVM, Memory, Flow).
+Welcome to the **Core Java Conceptwise Learning Repository**. This project is a curated collection of structured, concept-focused programs and deep-dive documentation designed to help you master Core Java from the ground up.
 
 ---
 
-## 📚 Modules
+## 🎯 Our Mission
 
-This repository is organized into specific modules for better learning:
-
-### 🔹 [Exception Handling](notes/exception-handling/README.md)
-*   Covers **Try-Catch, Verify, Hierarchy, Custom Exceptions**, and **Best Practices**.
-*   [View Exception Handling Notes & Programs](notes/exception-handling/README.md)
-
-### 🔹 [OOPS Concepts](notes/oops/README.md)
-*   Covers **Encapsulation, Inheritance, Polymorphism, Abstraction**.
-*   Includes **Constructors, execution flow, coupling, and cohesion**.
-*   [View OOPS Notes & Programs](notes/oops/README.md)
+*   🧠 **Deep Foundations**: Building a rock-solid understanding of Java syntax and semantics.
+*   ✨ **Clean Code**: Writing readable, maintainable, and industry-standard Java code.
+*   ⚙️ **Internal Logic**: Demystifying JVM internals, memory management, and execution flows.
 
 ---
 
-## 🛠 Tools Used
+## 📂 Project Structure
 
-*   **Java SE 17**
-*   **Eclipse IDE**
-*   **Git & GitHub**
+```text
+core-java/
+├── 📁 src/                           # Java Source Code
+│   └── 📁 com.corejava/
+│       ├── 📁 exceptionhandling/     # Exception Handling Modules
+│       └── 📁 oops/                  # OOPs Concept Modules
+├── 📁 notes/                         # Concept Documentation (Markdown)
+│   ├── 📁 exception-handling/        # In-depth Exception Notes
+│   └── 📁 oops/                      # Detailed OOPs Notes
+├── 📝 README.md                      # Main Entry Point
+└── ⚖️ LICENSE                         # MIT License
+```
 
 ---
 
-## 📌 Author
+## 📚 Modules & Learning Paths
+
+Explore our modules, each containing both explanatory notes and executable demonstration programs.
+
+### 🛡️ [Exception Handling](notes/exception-handling/README.md)
+*   **Status**: ✅ Module 1 & 2 Completed
+*   **Themes**: `Try-Catch`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`.
+*   [**📜 View Notes & Programs →**](notes/exception-handling/README.md)
+
+### 🧩 [OOPS Concepts](notes/oops/README.md)
+*   **Status**: ✅ Core, Inheritance, Polymorphism, Design completed.
+*   **Themes**: `Encapsulation`, `Inheritance`, `Abstraction`, `Polymorphism`, `Coupling & Cohesion`.
+*   [**📜 View Notes & Programs →**](notes/oops/README.md)
+
+---
+
+## 🛠 Tech Stack & Tools
+
+| Category | Tool |
+| :--- | :--- |
+| **Language** | Java SE 17 |
+| **IDE** | Eclipse / VS Code |
+| **VCS** | Git & GitHub |
+| **Docs** | Markdown |
+
+---
+
+## 📌 About the Author
 
 **Niranjan Kumar Singh**  
-*Learning Core Java with focus on clarity, depth, and correctness.*
+*Passionate about Java development, focusing on clarity, depth, and the "why" behind every line of code.*
 
 ---
 
-⭐ **Star this repository if you find it helpful!**
+⭐ **Star this repo if you find it useful for your Java journey!**
