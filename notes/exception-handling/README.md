@@ -17,29 +17,25 @@ core-java/
 ├── 📁 src/
 │   └── 📁 com/corejava/exceptionhandling/
 │       ├── 📁 module1_basics/
-│       │   ├── 📄 ExceptionIntroDemo.java
-│       │   ├── 📄 RuntimeStackDemo.java
-│       │   ├── 📄 DefaultExceptionHandlingDemo.java
-│       │   ├── 📄 ExceptionInMainDemo.java
-│       │   ├── 📄 ExceptionHierarchyDemo.java
-│       │   ├── 📄 CheckedVsUncheckedDemo.java
-│       │   ├── 📄 ThrowableMethodsDemo.java
-│       │   ├── 📄 StackTraceOrderDemo.java
+│       │   ├── 📄 ... (9 files)
 │       │   └── 📄 StackOverflowErrorDemo.java
-│       └── 📁 module2_trycatch/
-│           ├── 📄 TryCatchIntroDemo.java
-│           ├── 📄 TryCatchWithoutHandlingDemo.java
-│           ├── 📄 TryCatchWithHandlingDemo.java
-│           ├── 📄 TryCatchControlFlowDemo.java
-│           ├── 📄 RiskyCodeScopeDemo.java
-│           ├── 📄 ThrowableMethodsDemo.java
-│           ├── 📄 MultipleCatchDemo.java
-│           ├── 📄 CatchOrderRuleDemo.java
-│           └── 📄 DuplicateCatchCompileErrorDemo.java
+│       ├── 📁 module2_trycatch/
+│       │   ├── 📄 ... (9 files)
+│       │   └── 📄 DuplicateCatchCompileErrorDemo.java
+│       └── 📁 module3_finally/
+│           ├── 📄 FinallyBasicDemo.java
+│           ├── 📄 FinallyWithExceptionHandledDemo.java
+│           ├── 📄 FinallyWithExceptionNotHandledDemo.java
+│           ├── 📄 FinallyWithReturnDemo.java
+│           ├── 📄 FinallyOverridesReturnDemo.java
+│           ├── 📄 FinallyNotExecutedCaseDemo.java
+│           ├── 📄 FinalVsFinallyVsFinalizeDemo.java
+│           └── 📄 NestedTryCatchFinallyDemo.java
 ├── 📁 notes/
 │   └── 📁 exception-handling/
 │       ├── 📝 module1-basics.md
 │       ├── 📝 module2-trycatch.md
+│       ├── 📝 module3-finally.md
 │       └── 📝 README.md
 └── 📝 README.md (Root)
 ```
@@ -74,6 +70,20 @@ core-java/
 * Catch Order Rule (Child first, Parent last)
 
 📄 **Notes:** [module2-trycatch.md](module2-trycatch.md)
+ 
+ ### 🔹 Exception Handling – Module 3 (Completed)
+ **Concepts covered:**
+ * finally block definition and importance
+ * Execution guarantee of finally
+ * finally vs return statement (Interview cases)
+ * Rare cases where finally does not execute
+ * Difference between final, finally, and finalize()
+ * Control Flow in try–catch–finally
+ * Nested try–catch–finally
+ * All possible combinations of try–catch–finally
+ * Curly brace rules
+ 
+ 📄 **Notes:** [module3-finally.md](module3-finally.md)
 
 ---
 
@@ -108,6 +118,20 @@ core-java/
 | [`MultipleCatchDemo`](../../src/com/corejava/exceptionhandling/module2_trycatch/MultipleCatchDemo.java) | Demonstrates handling different exceptions with separate catch blocks. |
 | [`CatchOrderRuleDemo`](../../src/com/corejava/exceptionhandling/module2_trycatch/CatchOrderRuleDemo.java) | Shows the importance of catch block order (Child first, Parent last). |
 | [`DuplicateCatchCompileErrorDemo`](../../src/com/corejava/exceptionhandling/module2_trycatch/DuplicateCatchCompileErrorDemo.java) | Demonstrates compile-time error when same exception is caught twice. |
+ 
+ ### 🔹 Module 3: finally & Control Flow
+ **Location:** `src/com/corejava/exceptionhandling/module3_finally`
+ 
+ | Class Name | Description |
+ | :--- | :--- |
+ | [`FinallyBasicDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyBasicDemo.java) | Demonstrates the basic syntax and execution of the `finally` block. |
+ | [`FinallyWithExceptionHandledDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyWithExceptionHandledDemo.java) | Shows `finally` execution when an exception is caught and handled. |
+ | [`FinallyWithExceptionNotHandledDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyWithExceptionNotHandledDemo.java) | Shows `finally` execution even when an exception is NOT handled. |
+ | [`FinallyWithReturnDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyWithReturnDemo.java) | Demonstrates that `finally` executes even if there is a `return` statement in try/catch. |
+ | [`FinallyOverridesReturnDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyOverridesReturnDemo.java) | Shows how a `return` in `finally` overrides `return` values from try/catch. |
+ | [`FinallyNotExecutedCaseDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyNotExecutedCaseDemo.java) | Demonstrates rare cases (like `System.exit(0)`) where `finally` does not execute. |
+ | [`FinalVsFinallyVsFinalizeDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinalVsFinallyVsFinalizeDemo.java) | Differentiates between `final`, `finally`, and `finalize()`. |
+ | [`NestedTryCatchFinallyDemo`](../../src/com/corejava/exceptionhandling/module3_finally/NestedTryCatchFinallyDemo.java) | Demonstrates the control flow in nested try-catch-finally blocks. |
 
 ---
 
