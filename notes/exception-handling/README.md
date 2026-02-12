@@ -22,20 +22,25 @@ core-java/
 │       ├── 📁 module2_trycatch/
 │       │   ├── 📄 ... (9 files)
 │       │   └── 📄 DuplicateCatchCompileErrorDemo.java
-│       └── 📁 module3_finally/
-│           ├── 📄 FinallyBasicDemo.java
-│           ├── 📄 FinallyWithExceptionHandledDemo.java
-│           ├── 📄 FinallyWithExceptionNotHandledDemo.java
-│           ├── 📄 FinallyWithReturnDemo.java
-│           ├── 📄 FinallyOverridesReturnDemo.java
-│           ├── 📄 FinallyNotExecutedCaseDemo.java
-│           ├── 📄 FinalVsFinallyVsFinalizeDemo.java
-│           └── 📄 NestedTryCatchFinallyDemo.java
+│       ├── 📁 module3_finally/
+│       │   └── 📄 ... (8 files)
+│       └── 📁 module4_propagation/
+│           ├── 📄 ExceptionPropagationDemo.java
+│           ├── 📄 ThrowKeywordBasicDemo.java
+│           ├── 📄 ThrowNullDemo.java
+│           ├── 📄 ThrowCheckedExceptionDemo.java
+│           ├── 📄 ThrowsKeywordBasicDemo.java
+│           ├── 📄 MultipleThrowsDemo.java
+│           ├── 📄 ThrowsOrderDemo.java
+│           ├── 📄 ThrowsOnlyThrowableDemo.java
+│           ├── 📄 ParentChildThrowsRuleDemo.java
+│           └── 📄 CatchFullyCheckedRuleDemo.java
 ├── 📁 notes/
 │   └── 📁 exception-handling/
 │       ├── 📝 module1-basics.md
 │       ├── 📝 module2-trycatch.md
 │       ├── 📝 module3-finally.md
+│       ├── 📝 module4-propagation.md
 │       └── 📝 README.md
 └── 📝 README.md (Root)
 ```
@@ -85,6 +90,21 @@ core-java/
  
  📄 **Notes:** [module3-finally.md](module3-finally.md)
 
+ ### 🔹 Exception Handling – Module 4 (Completed)
+ **Concepts covered:**
+ * Exception Propagation (Stack Unwinding Mechanism)
+ * Who creates the Exception Object? (JVM vs Programmer)
+ * What does an Exception Object contain?
+ * throw keyword (Purpose, Rules, and unreachable statement)
+ * throw null vs throw exception
+ * throws keyword (Delegation, satisfy compiler)
+ * throws Rules (Methods/Constructors only, Multiple exceptions)
+ * Overriding Rule with throws (Child class broader exception rule)
+ * Catch block compile-time rule for fully checked exceptions
+ * throw vs throws comparison
+ 
+ 📄 **Notes:** [module4-propagation.md](module4-propagation.md)
+
 ---
 
 ## 💻 Programs
@@ -132,6 +152,22 @@ core-java/
  | [`FinallyNotExecutedCaseDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinallyNotExecutedCaseDemo.java) | Demonstrates rare cases (like `System.exit(0)`) where `finally` does not execute. |
  | [`FinalVsFinallyVsFinalizeDemo`](../../src/com/corejava/exceptionhandling/module3_finally/FinalVsFinallyVsFinalizeDemo.java) | Differentiates between `final`, `finally`, and `finalize()`. |
  | [`NestedTryCatchFinallyDemo`](../../src/com/corejava/exceptionhandling/module3_finally/NestedTryCatchFinallyDemo.java) | Demonstrates the control flow in nested try-catch-finally blocks. |
+
+ ### 🔹 Module 4: Exception Propagation & Keywords
+ **Location:** `src/com/corejava/exceptionhandling/module4_propagation`
+ 
+ | Class Name | Description |
+ | :--- | :--- |
+ | [`ExceptionPropagationDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ExceptionPropagationDemo.java) | Demonstrates the stack unwinding mechanism and exception propagation. |
+ | [`ThrowKeywordBasicDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowKeywordBasicDemo.java) | Basic usage of the `throw` keyword to manually trigger an exception. |
+ | [`ThrowNullDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowNullDemo.java) | Shows that `throw null` results in a `NullPointerException`. |
+ | [`ThrowCheckedExceptionDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowCheckedExceptionDemo.java) | Demonstrates the requirement to catch or declare checked exceptions when using `throw`. |
+ | [`ThrowsKeywordBasicDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowsKeywordBasicDemo.java) | Basic usage of the `throws` keyword for exception delegation. |
+ | [`MultipleThrowsDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/MultipleThrowsDemo.java) | Shows how to declare multiple exceptions in the `throws` clause. |
+ | [`ThrowsOrderDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowsOrderDemo.java) | Shows that the order of exceptions in the `throws` clause does not matter. |
+ | [`ThrowsOnlyThrowableDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowsOnlyThrowableDemo.java) | Demonstrates that only `Throwable` types can be used with `throws`. |
+ | [`ParentChildThrowsRuleDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ParentChildThrowsRuleDemo.java) | Demonstrates the rules for overriding methods that throw exceptions. |
+ | [`CatchFullyCheckedRuleDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/CatchFullyCheckedRuleDemo.java) | Demonstrates the compile-time error when catching a fully checked exception that is never thrown. |
 
 ---
 

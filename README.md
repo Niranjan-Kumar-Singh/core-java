@@ -38,7 +38,7 @@ core-java/
 Explore our modules, each containing both explanatory notes and executable demonstration programs.
 
 ### 🛡️ [Exception Handling](notes/exception-handling/README.md)
-*   **Status**: ✅ Module 1, 2 & 3 Completed
+*   **Status**: ✅ Module 1, 2, 3 & 4 Completed
 *   **Themes**: `Try-Catch`, `finally`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`.
 *   [**📜 View Notes & Programs →**](notes/exception-handling/README.md)
 
