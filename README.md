@@ -38,7 +38,7 @@ core-java/
 Explore our modules, each containing both explanatory notes and executable demonstration programs.
 
 ### 🛡️ [Exception Handling](notes/exception-handling/README.md)
-*   **Status**: ✅ Module 1, 2, 3, 4 & 5 Completed
+*   **Status**: ✅ Module 1, 2, 3, 4, 5 & 6 Completed
 *   **Themes**: `Try-Catch`, `finally`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`, `Custom Exceptions`, `Compile-Time Rules`.
 *   [**📜 View Notes & Programs →**](notes/exception-handling/README.md)
 
@@ -63,6 +63,7 @@ Explore our modules, each containing both explanatory notes and executable demon
 ## 📌 About the Author
 
 **Niranjan Kumar Singh**  
+📸 **Instagram**: [`niranjan._23`](https://www.instagram.com/niranjan._23)  
 *Passionate about Java development, focusing on clarity, depth, and the "why" behind every line of code.*
 
 ---

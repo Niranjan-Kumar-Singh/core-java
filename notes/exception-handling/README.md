@@ -40,9 +40,12 @@ core-java/
 │           └── 📄 ExceptionChainingDemo.java
 ├── 📁 notes/
 │   └── 📁 exception-handling/
-│       ├── 📝 ...
-│       ├── 📝 module4-propagation.md
-│       ├── 📝 module5-custom.md
+│       ├── 📝 module1-intro-hierarchy.md
+│       ├── 📝 module2-try-catch-usage.md
+│       ├── 📝 module3-finally-combinations.md
+│       ├── 📝 module4-throw-throws-propagation.md
+│       ├── 📝 module5-rules-custom.md
+│       ├── 📝 module6-common-exceptions.md
 │       └── 📝 README.md
 └── 📝 README.md (Root)
 ```
@@ -64,7 +67,7 @@ core-java/
 * Stack trace order
 * Error vs Exception
 
-📄 **Notes:** [module1-basics.md](module1-basics.md)
+📄 **Notes:** [module1-intro-hierarchy.md](module1-intro-hierarchy.md)
 
 ### 🔹 Exception Handling – Module 2 (Completed)
 **Concepts covered:**
@@ -76,7 +79,7 @@ core-java/
 * Try with Multiple Catch Blocks
 * Catch Order Rule (Child first, Parent last)
 
-📄 **Notes:** [module2-trycatch.md](module2-trycatch.md)
+📄 **Notes:** [module2-try-catch-usage.md](module2-try-catch-usage.md)
  
  ### 🔹 Exception Handling – Module 3 (Completed)
  **Concepts covered:**
@@ -90,7 +93,7 @@ core-java/
  * All possible combinations of try–catch–finally
  * Curly brace rules
  
- 📄 **Notes:** [module3-finally.md](module3-finally.md)
+ 📄 **Notes:** [module3-finally-combinations.md](module3-finally-combinations.md)
 
  ### 🔹 Exception Handling – Module 4 (Completed)
  **Concepts covered:**
@@ -105,7 +108,7 @@ core-java/
  * Catch block compile-time rule for fully checked exceptions
  * throw vs throws comparison
  
- 📄 **Notes:** [module4-propagation.md](module4-propagation.md)
+ 📄 **Notes:** [module4-throw-throws-propagation.md](module4-throw-throws-propagation.md)
 
  ### 🔹 Exception Handling – Module 5 (Completed)
  **Concepts covered:**
@@ -121,7 +124,22 @@ core-java/
  * Proper Constructor Design for Custom Exceptions
  * Real-world layered example (Banking)
  
- 📄 **Notes:** [module5-custom.md](module5-custom.md)
+ 📄 **Notes:** [module5-rules-custom.md](module5-rules-custom.md)
+
+ ### 🔹 Exception Handling – Module 6 (Completed)
+ **Concepts covered:**
+ * Understanding JVM-Generated vs Programmatic Exceptions
+ * Top 11 Common & Real-World Exceptions
+ * `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ClassCastException`
+ * `StackOverflowError`, `OutOfMemoryError` (Stack vs Heap memory)
+ * `NoClassDefFoundError` vs `ClassNotFoundException`
+ * `ExceptionInInitializerError` (Static initialization failures)
+ * `IllegalArgumentException`, `NumberFormatException`
+ * `IllegalThreadStateException` (Thread lifecycle violations)
+ * `AssertionError`
+ * Production Debugging & Defensive Coding Strategies
+ 
+ 📄 **Notes:** [module6-common-exceptions.md](module6-common-exceptions.md)
 
 ---
 
