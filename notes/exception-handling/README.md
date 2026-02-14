@@ -24,23 +24,25 @@ core-java/
 │       │   └── 📄 DuplicateCatchCompileErrorDemo.java
 │       ├── 📁 module3_finally/
 │       │   └── 📄 ... (8 files)
-│       └── 📁 module4_propagation/
-│           ├── 📄 ExceptionPropagationDemo.java
-│           ├── 📄 ThrowKeywordBasicDemo.java
-│           ├── 📄 ThrowNullDemo.java
-│           ├── 📄 ThrowCheckedExceptionDemo.java
-│           ├── 📄 ThrowsKeywordBasicDemo.java
-│           ├── 📄 MultipleThrowsDemo.java
-│           ├── 📄 ThrowsOrderDemo.java
-│           ├── 📄 ThrowsOnlyThrowableDemo.java
-│           ├── 📄 ParentChildThrowsRuleDemo.java
-│           └── 📄 CatchFullyCheckedRuleDemo.java
+│       ├── 📁 module4_propagation/
+│       │   └── 📄 ... (10 files)
+│       └── 📁 module5_compiletime_custom/
+│           ├── 📄 CustomCheckedExceptionDemo.java
+│           ├── 📄 CustomUncheckedExceptionDemo.java
+│           ├── 📄 CustomExceptionConstructorsDemo.java
+│           ├── 📄 CheckedExceptionCompileErrorDemo.java
+│           ├── 📄 UnreachableCatchOrderDemo.java
+│           ├── 📄 FullyCheckedCatchRuleDemo.java
+│           ├── 📄 DuplicateCatchCompileErrorDemo.java
+│           ├── 📄 OverridingCheckedExceptionRuleDemo.java
+│           ├── 📄 InvalidThrowsUsageDemo.java
+│           ├── 📄 BankingLayeredExampleDemo.java
+│           └── 📄 ExceptionChainingDemo.java
 ├── 📁 notes/
 │   └── 📁 exception-handling/
-│       ├── 📝 module1-basics.md
-│       ├── 📝 module2-trycatch.md
-│       ├── 📝 module3-finally.md
+│       ├── 📝 ...
 │       ├── 📝 module4-propagation.md
+│       ├── 📝 module5-custom.md
 │       └── 📝 README.md
 └── 📝 README.md (Root)
 ```
@@ -105,6 +107,22 @@ core-java/
  
  📄 **Notes:** [module4-propagation.md](module4-propagation.md)
 
+ ### 🔹 Exception Handling – Module 5 (Completed)
+ **Concepts covered:**
+ * Compile-Time Rules in Exception Handling
+ * Why Java enforces Checked Exceptions
+ * Unreported Checked Exception rule
+ * Unreachable catch blocks (Hierarchy order)
+ * Catching fully checked exceptions rule
+ * Duplicate catch blocks rule
+ * Overriding checked exception rules (Polymorphism)
+ * Invalid `throws` usage
+ * Custom (User-Defined) Exceptions (Checked vs Unchecked)
+ * Proper Constructor Design for Custom Exceptions
+ * Real-world layered example (Banking)
+ 
+ 📄 **Notes:** [module5-custom.md](module5-custom.md)
+
 ---
 
 ## 💻 Programs
@@ -168,6 +186,23 @@ core-java/
  | [`ThrowsOnlyThrowableDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ThrowsOnlyThrowableDemo.java) | Demonstrates that only `Throwable` types can be used with `throws`. |
  | [`ParentChildThrowsRuleDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/ParentChildThrowsRuleDemo.java) | Demonstrates the rules for overriding methods that throw exceptions. |
  | [`CatchFullyCheckedRuleDemo`](../../src/com/corejava/exceptionhandling/module4_propagation/CatchFullyCheckedRuleDemo.java) | Demonstrates the compile-time error when catching a fully checked exception that is never thrown. |
+
+ ### 🔹 Module 5: Compile-Time Rules & Custom Exceptions
+ **Location:** `src/com/corejava/exceptionhandling/module5_compiletime_custom`
+ 
+ | Class Name | Description |
+ | :--- | :--- |
+ | [`CustomCheckedExceptionDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/CustomCheckedExceptionDemo.java) | Demonstrates how to create and use a custom Checked Exception. |
+ | [`CustomUncheckedExceptionDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/CustomUncheckedExceptionDemo.java) | Demonstrates how to create and use a custom Unchecked Exception. |
+ | [`CustomExceptionConstructorsDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/CustomExceptionConstructorsDemo.java) | Shows best practice constructor design for custom exceptions. |
+ | [`CheckedExceptionCompileErrorDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/CheckedExceptionCompileErrorDemo.java) | Shows the "unreported exception" compile-time error. |
+ | [`UnreachableCatchOrderDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/UnreachableCatchOrderDemo.java) | Demonstrates errors caused by catching parent exceptions before children. |
+ | [`FullyCheckedCatchRuleDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/FullyCheckedCatchRuleDemo.java) | Shows the rule about catching fully checked exceptions without possibility. |
+ | [`DuplicateCatchCompileErrorDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/DuplicateCatchCompileErrorDemo.java) | Shows the error when catching the same exception type twice. |
+ | [`OverridingCheckedExceptionRuleDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/OverridingCheckedExceptionRuleDemo.java) | Demonstrates rules for overriding methods that throw checked exceptions. |
+ | [`InvalidThrowsUsageDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/InvalidThrowsUsageDemo.java) | Shows syntax errors and rule violations for the `throws` keyword. |
+ | [`BankingLayeredExampleDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/BankingLayeredExampleDemo.java) | A real-world example of using custom exceptions in a banking domain. |
+ | [`ExceptionChainingDemo`](../../src/com/corejava/exceptionhandling/module5_compiletime_custom/ExceptionChainingDemo.java) | Shows how to wrap and chain exceptions while preserving the root cause. |
 
 ---
 

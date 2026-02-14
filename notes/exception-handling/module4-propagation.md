@@ -33,8 +33,8 @@ When an exception occurs:
 
 This entire removal process is called:
 
-👉 Stack Unwinding  
-👉 Exception Propagation  
+👉 Stack Unwinding<br>
+👉 Exception Propagation
 
 ---
 
@@ -58,29 +58,28 @@ System.out.println(10 / 0);
 2. JVM detects illegal arithmetic operation (division by zero).  
 3. JVM creates an object of:
 
-    **Exception Name:**  
-    `java.lang.ArithmeticException`
-
-    **Message:**  
+    **Exception Name:**<br>
+    `java.lang.ArithmeticException`<br><br>
+    **Message:**<br>
     `/ by zero`
 
-4. JVM captures stack trace.  
+4. JVM captures stack trace.
 
-    **Important Technical Detail:**  
-    The stack trace is arranged in reverse chronological order.  
-    The topmost entry represents the most recent method call where the exception actually occurred.  
+    **Important Technical Detail:**<br>
+    The stack trace is arranged in reverse chronological order.<br>
+    The topmost entry represents the most recent method call where the exception actually occurred.<br>
     Each subsequent line shows the caller method, thereby reflecting the exact order of method invocation stored in the Runtime Stack.
 
-5. JVM begins exception propagation.  
+5. JVM begins exception propagation.
 
-    **Reason:**  
+    **Reason:**<br>
     Division by zero violates arithmetic rules.
 
     So:
 
     👉 In system-detected runtime errors, JVM creates the exception object.
 
-**Important Concept:**  
+**Important Concept:**<br>
 The method in which the exception occurs is responsible for creating (or triggering the creation of) the exception object and handing it over to the JVM’s exception handling mechanism.
 
 ---
@@ -97,12 +96,11 @@ Here:
 
 1. Programmer explicitly creates exception object.  
 2. throw hands object to JVM.  
-3. JVM starts propagation.  
+3. JVM starts propagation.
 
-**Exception Name:**  
-`java.lang.ArithmeticException`
-
-**Reason:**  
+**Exception Name:**<br>
+`java.lang.ArithmeticException`<br><br>
+**Reason:**<br>
 Programmer manually triggered exception mechanism.
 
 So:
@@ -120,7 +118,7 @@ An exception object contains:
 3. Stack trace  
 4. Cause (optional – advanced feature)  
 
-**Important:**  
+**Important:**<br>
 Stack trace is captured at the time the exception object is created, not when printed.
 
 ---
@@ -148,12 +146,12 @@ However, JVM does NOT understand business rules.
 
 **Example:**
 
-Requirement:  
+Requirement:<br>
 Age must be ≥ 18.
 
-```
+```java
 if (age < 18) {
-throw new IllegalArgumentException("Not eligible to vote");
+    throw new IllegalArgumentException("Not eligible to vote");
 }
 ```
 
@@ -207,70 +205,59 @@ If not found → stack unwinding continues
 
 **Invalid:**
 
-```
+```java
 throw new Test();
 ```
 
-**Compile-Time Error:**
+**Compile-Time Error:**<br>
+`incompatible types: Test cannot be converted to Throwable`
 
-```
-incompatible types: Test cannot be converted to Throwable
-```
-
-**Reason:**  
+**Reason:**<br>
 Only classes extending `java.lang.Throwable` can be thrown.
 
 ---
 
 #### Rule 2: Statement After throw Is Unreachable
 
-```
+```java
 throw new ArithmeticException();
 System.out.println("Hello");
 ```
 
-**Compile-Time Error:**
+**Compile-Time Error:**<br>
+`unreachable statement`
 
-```
-unreachable statement
-```
-
-**Reason:**  
+**Reason:**<br>
 throw transfers control immediately.
 
 ---
 
 #### Rule 3: throw null
 
-```
+```java
 throw null;
 ```
 
 Compiles successfully.
 
-**Runtime Exception:**
+**Runtime Exception:**<br>
+**Exception Name:** `java.lang.NullPointerException`
 
-**Exception Name:**  
-`java.lang.NullPointerException`
-
-**Reason:**  
+**Reason:**<br>
 JVM attempts to throw a null reference.
 
 ---
 
 #### Rule 4: Checked Exception with throw
 
-```
+```java
 throw new Exception();
 ```
 
-**Compile-Time Error:**
+**Compile-Time Error:**<br>
+`unreported exception java.lang.Exception; must be caught or declared to be thrown`
 
-```
-unreported exception java.lang.Exception; must be caught or declared to be thrown
-```
-
-**Reason:**  
+**Reason:**<br>
 Exception is checked; compiler enforces handling.
 
 ---
@@ -278,11 +265,11 @@ Exception is checked; compiler enforces handling.
 #### Rule 5: throw Causes Abnormal Termination
 
 | Statement | Termination |
-|------------|------------|
-| return | Normal |
-| throw | Abnormal |
+|-----------|-------------|
+| return    | Normal      |
+| throw     | Abnormal    |
 
-**Reason:**  
+**Reason:**<br>
 throw interrupts normal control flow.
 
 ---
@@ -355,22 +342,18 @@ must be caught or declared to be thrown
 
 ---
 
-#### Rule 1: Only for Methods & Constructors
-
 **Invalid:**
 
-```
+```java
 class Test throws Exception { }
 ```
 
-**Reason:**  
+**Reason:**<br>
 throws is part of method/constructor declaration syntax only.
 
 ---
 
-#### Rule 2: Only Throwable Types Allowed
-
-```
+```java
 void m1() throws Test;
 ```
 
@@ -378,14 +361,14 @@ Valid only if Test extends Throwable.
 
 Otherwise:
 
-**Compile-Time Error:**  
-Incompatible types.
+**Compile-Time Error:**<br>
+`Incompatible types`.
 
 ---
 
 #### Rule 3: Multiple Exceptions Allowed
 
-```
+```java
 void m1() throws IOException, SQLException, ClassNotFoundException
 ```
 
@@ -397,33 +380,33 @@ Allowed.
 
 Unlike catch blocks, order in throws clause does not matter.
 
-**Reason:**  
+**Reason:**<br>
 No matching logic is involved in throws declaration.
 
 ---
 
 #### Rule 5: Parent & Child Together (Redundant but Valid)
 
-```
+```java
 throws Exception, IOException
 ```
 
 Valid but redundant.
 
-**Reason:**  
+**Reason:**<br>
 IOException is subclass of Exception.
 
 ---
 
 #### Rule 6: Duplicate Not Allowed
 
-```
+```java
 throws IOException, IOException
 ```
 
 Compile-Time Error.
 
-**Reason:**  
+**Reason:**<br>
 Duplicate types not allowed.
 
 ---
@@ -432,26 +415,26 @@ Duplicate types not allowed.
 
 Parent:
 
-```
+```java
 void m1() throws IOException { }
 ```
 
 Invalid Child:
 
-```
+```java
 void m1() throws Exception { }
 ```
 
-Compile-Time Error.
+**Compile-Time Error.**
 
-**Reason:**  
+**Reason:**<br>
 A child class method cannot throw a broader checked exception than the parent class method.
 
 This restriction exists to maintain method contract consistency in polymorphism.
 
 Because of polymorphism:
 
-```
+```java
 Parent p = new Child();
 p.m1();
 ```
@@ -480,59 +463,73 @@ Writing catch block for that exception results in compile-time error.
 
 **Example:**
 
-```
+```java
 try {
-System.out.println("Hello");
+    System.out.println("Hello");
 } catch (IOException e) { }
 ```
 
-**Compile-Time Error:**
+**Compile-Time Error:**<br>
+`exception java.io.IOException is never thrown in body of corresponding try statement`
 
-```
-exception java.io.IOException is never thrown in body of corresponding try statement
-```
-
-**Reason:**  
+**Reason:**<br>
 Compiler performs static analysis for fully checked exceptions.
 
 Allowed:
 
-```
+```java
 catch (Exception e)
 ```
 
-**Reason:**  
+**Reason:**<br>
 Exception is partially checked.
 
 ---
 
 ## 1️⃣8️⃣ throw vs throws
 
-| Feature | throw | throws |
-|----------|--------|--------|
-| Used in | Method body | Method declaration |
-| Actually throws? | Yes | No |
-| Compile-time role | No | Yes |
-| Multiple allowed | No | Yes |
-| Stops execution | Yes | No |
+| Feature          | throw       | throws             |
+| ---------------- | ----------- | ------------------ |
+| Used in          | Method body | Method declaration |
+| Actually throws? | Yes         | No                 |
+| Compile-time role| No          | Yes                |
+| Multiple allowed | No          | Yes                |
+| Stops execution  | Yes         | No                 |
 
 ---
 
-## 🔟 Final Exception Flow Model
+## 🔟 Final Integration Model
 
-```
-Exception Occurs
-        ↓
-Object Created (JVM or Programmer)
-        ↓
-throw (manual) or automatic transfer
-        ↓
-Method terminates abnormally
-        ↓
-Stack Unwinding
-        ↓
-Matching catch found?
-        ↓
-Yes → Normal continuation
-No  → Default handler → Abnormal termination
+**Creation Phase:**
+
+* Exception occurs due to technical violation (JVM) or logical rule (Programmer).
+* Exception object is created containing Name, Message, and Stack Trace.
+
+**Propagation Phase:**
+
+* Method terminates abnormally.
+* Stack unwinding begins (Stack frame removal).
+* Object is transferred to the caller.
+
+**Handling Phase:**
+
+* JVM searches for matching catch block in the call stack.
+* If found → Handler executes, normal flow continues.
+* If NOT found → Default Exception Handler executes, abnormal termination.
+
+---
+
+## 🔥 Final Conclusion of Module 4
+
+1. Exception Propagation is the upward transfer of an exception object.
+2. The Runtime Stack is unwound frame-by-frame during propagation.
+3. `throw` is used to manually trigger the exception mechanism (Business logic).
+4. `throws` is used to delegate responsibility to the caller (Compile-time contract).
+5. Only `Throwable` types can be thrown or declared.
+6. A statement immediately following `throw` is unreachable.
+7. `throw null` triggers a `NullPointerException`.
+8. Overriding rules ensure polymorphism consistency.
+9. Compiler prevents catching fully checked exceptions that cannot occur.
+
+---
 ```

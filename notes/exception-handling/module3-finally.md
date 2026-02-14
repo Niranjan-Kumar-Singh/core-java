@@ -18,17 +18,17 @@ In simple words:
 
 In real-world applications, we often:
 
-* Open files
-* Open database connections
-* Allocate memory
-* Use Scanner
+* Open files<br>
+* Open database connections<br>
+* Allocate memory<br>
+* Use Scanner<br>
 * Open network connections
 
 These resources must be closed properly to prevent:
 
-* Memory leaks
-* Resource leaks
-* Performance issues
+* Memory leaks<br>
+* Resource leaks<br>
+* Performance issues<br>
 * Application crashes
 
 The finally block ensures that cleanup happens.
@@ -174,8 +174,8 @@ These three words look similar but are completely different concepts.
 
 It can be applied to:
 
-* Variables
-* Methods
+* Variables<br>
+* Methods<br>
 * Classes
 
 ### 🔹 final Variable
@@ -217,8 +217,8 @@ Example: `String` class is final.
 
 `finally` is a block used in exception handling.
 
-* It is associated with `try`
-* Used for cleanup logic
+* It is associated with `try`<br>
+* Used for cleanup logic<br>
 * Not related to inheritance or garbage collection
 
 ---
@@ -241,8 +241,8 @@ protected void finalize() throws Throwable {
 
 ### Important Points
 
-* Not guaranteed to run immediately
-* Deprecated in modern Java
+* Not guaranteed to run immediately<br>
+* Deprecated in modern Java<br>
 * Not recommended for important resource cleanup
 
 ---
@@ -262,7 +262,8 @@ protected void finalize() throws Throwable {
 
 ## General Structure
 
-> 🔎 **JVM Internal Behavior:** When an exception occurs inside the try block, the JVM first searches for a matching catch block. Before transferring control outside the try-catch structure (whether handled or not), the JVM ensures that the finally block is executed.
+> 🔎 **JVM Internal Behavior:**<br>
+When an exception occurs inside the try block, the JVM first searches for a matching catch block. Before transferring control outside the try-catch structure (whether handled or not), the JVM ensures that the finally block is executed.
 
 ```java
 try {
@@ -328,22 +329,12 @@ try {
 
 ## 🔹 Core Syntax Rules
 
-1. `try` must be followed by at least one `catch` OR one `finally` OR both.
-
-2. `catch` cannot exist without `try`.
-
-3. `finally` cannot exist without `try`.
-
-4. Correct order must always be:
-
-   ```
-   try → catch → finally
-   ```
-
-5. Only one finally block per try.
-
-6. Curly braces `{}` are mandatory.
-
+1. `try` must be followed by at least one `catch` OR one `finally` OR both.<br>
+2. `catch` cannot exist without `try`.<br>
+3. `finally` cannot exist without `try`.<br>
+4. Correct order must always be: `try` → `catch` → `finally`.<br>
+5. Only one finally block per try.<br>
+6. Curly braces `{}` are mandatory.<br>
 7. Nesting of try–catch–finally is allowed.
 
 ---
@@ -739,5 +730,32 @@ try {
 
 ❌ Invalid
 Reason: Curly braces mandatory.
+
+---
+
+## 🔟 Final Integration Model
+
+**Resource Lifecycle:**
+
+* **Allocation:** Done outside or at the start of `try`.
+* **Execution:** Business logic inside `try`.
+* **Handling:** Error specific logic in `catch`.
+* **Deallocation:** Cleanup logic always in `finally`.
+
+**Combination Rule:**
+
+* `try` cannot stand alone.<br>
+* `catch` or `finally` must follow `try`.
+
+---
+
+## 🔥 Final Conclusion of Module 3
+
+1. `finally` block is for **mandatory cleanup code**.
+2. It executes regardless of whether an exception is thrown or handled.
+3. `System.exit(0)` is the only way to prevent `finally` from executing.
+4. `finally` block **overrides** return statements in `try` or `catch`.
+5. `final` (Modifier), `finally` (Block), `finalize()` (Method) are distinct.
+6. Proper ordering is `try -> catch -> finally`.
 
 ---

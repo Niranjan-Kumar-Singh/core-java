@@ -10,8 +10,8 @@
 
 An **exception** is a **runtime problem** that occurs during program execution and **disrupts the normal flow of the program**.
 
-* Exceptions are **objects** created by the **JVM**
-* Every exception object belongs to the **Throwable class hierarchy**
+* Exceptions are **objects** created by the **JVM**<br>
+* Every exception object belongs to the **Throwable class hierarchy**<br>
 * Exceptions occur **only at runtime**, not at compile time
 
 👉 When an exception occurs, Java creates an **exception object** and looks for appropriate handling code.
@@ -22,9 +22,9 @@ An **exception** is a **runtime problem** that occurs during program execution a
 
 Exceptions may occur due to invalid operations such as:
 
-* Dividing a number by zero
-* Accessing an invalid array index
-* Opening a file that does not exist
+* Dividing a number by zero<br>
+* Accessing an invalid array index<br>
+* Opening a file that does not exist<br>
 * Using a null reference
 
 📌 These errors cannot always be detected at compile time, so Java handles them at runtime.
@@ -35,17 +35,17 @@ Exceptions may occur due to invalid operations such as:
 
 ### Without Try–Catch
 
-* JVM detects the problem
-* JVM prints exception details
-* Program terminates immediately
-  ➡ **Abnormal termination**
+* JVM detects the problem<br>
+* JVM prints exception details<br>
+* Program terminates immediately → **Abnormal termination**
+
+---
 
 ### With Try–Catch
 
-* JVM detects the problem
-* JVM transfers control to programmer-defined handling code
-* Programmer decides how to recover or respond
-  ➡ **Normal termination**
+* JVM detects the problem<br>
+* JVM transfers control to programmer-defined handling code<br>
+* Programmer decides how to recover or respond → **Normal termination**
 
 👉 This is why it is called **customized exception handling**.
 
@@ -57,8 +57,8 @@ Exceptions may occur due to invalid operations such as:
 
 📌 Exception handling improves:
 
-* Program reliability
-* User experience
+* Program reliability<br>
+* User experience<br>
 * Application stability
 
 ➡ It is **highly recommended** in all real-world Java applications.
@@ -69,8 +69,7 @@ Exceptions may occur due to invalid operations such as:
 
 **Risky code** is the code that **may cause an exception at runtime**.
 
-### Examples
-
+### Examples:
 ```java
 10 / 0              // ArithmeticException
 arr[10]             // ArrayIndexOutOfBoundsException
@@ -79,11 +78,11 @@ str.length()        // NullPointerException
 
 ### Rules
 
-* Risky code must always be written inside the **try block**
+* Risky code must always be written inside the **try block**<br>
 * Exception handling logic must be written inside the **catch block**
 
-📌 **Golden Rule:**
-👉 Only risky code should be placed inside the try block.
+📌 **Golden Rule:**<br>
+Only risky code should be placed inside the try block.
 
 ---
 
@@ -101,12 +100,11 @@ try {
 
 ## 🔹 JVM Internals
 
-1. JVM executes the `try` block line by line
+1. JVM executes the `try` block line by line  
 2. If an exception occurs:
-
-   * JVM creates an exception object
-   * JVM searches for a matching catch block
-3. If a matching catch block is found → it is executed
+    * JVM creates an exception object<br>
+    * JVM searches for a matching catch block
+3. If a matching catch block is found → it is executed  
 4. If no matching catch block is found → program terminates abnormally
 
 ---
@@ -125,9 +123,9 @@ class Test {
 
 ### Execution Flow
 
-1. Statement 1 → executed
-2. `10 / 0` → ArithmeticException occurs
-3. JVM prints exception information
+1. Statement 1 → executed  
+2. `10 / 0` → ArithmeticException occurs  
+3. JVM prints exception information  
 4. Program stops immediately
 
 ### Output
@@ -137,7 +135,7 @@ Statement 1
 Runtime Error: / by zero
 ```
 
-❌ Program terminates abnormally
+❌ Program terminates abnormally<br>
 ❌ Statement 3 is not executed
 
 ---
@@ -160,10 +158,10 @@ class Test {
 
 ### Execution Flow
 
-1. Statement 1 → executed
-2. Exception occurs inside try block
-3. JVM matches `ArithmeticException`
-4. Catch block executes alternative logic
+1. Statement 1 → executed  
+2. Exception occurs inside try block  
+3. JVM matches `ArithmeticException`  
+4. Catch block executes alternative logic  
 5. Program continues normally
 
 ### Output
@@ -174,15 +172,15 @@ Statement 1
 Statement 3
 ```
 
-✅ Program terminates normally
+✅ Program terminates normally<br>
 ✅ Exception is handled properly
 
 ---
 
 ## ⭐ Key Points
 
-* If an exception occurs inside try, control moves to catch
-* Remaining statements inside try are skipped
+* If an exception occurs inside try, control moves to catch<br>
+* Remaining statements inside try are skipped<br>
 * After catch, program continues normally
 
 ---
@@ -249,18 +247,18 @@ S1
 
 ## ⚠️ Golden Rules
 
-1. Try block should contain **minimum code**
-2. Catch block executes **only when exception occurs**
-3. Once exception occurs, rest of try is skipped
+1. Try block should contain **minimum code**<br>
+2. Catch block executes **only when exception occurs**<br>
+3. Once exception occurs, rest of try is skipped<br>
 4. Code outside try block must be safe
 
 ---
 
 ## 📝 Important Notes
 
-1. If an exception occurs in try, remaining statements in try are skipped
-2. Try block should contain only risky code
-3. Catch and finally blocks can also throw exceptions
+1. If an exception occurs in try, remaining statements in try are skipped<br>
+2. Try block should contain only risky code<br>
+3. Catch and finally blocks can also throw exceptions<br>
 4. If an exception occurs outside try, termination is always abnormal
 
 ---
@@ -280,8 +278,8 @@ Exception Name : Description
     Stack Trace
 ```
 
-* Most detailed
-* Used internally by JVM
+* Most detailed<br>
+* Used internally by JVM<br>
 * Helpful for debugging
 
 ---
@@ -304,7 +302,7 @@ Exception Name : Description
 Description
 ```
 
-* User-friendly
+* User-friendly<br>
 * Best for displaying error messages
 
 ---
@@ -449,3 +447,30 @@ try {
 ```
 
 ❌ Compile-time error
+
+---
+
+## 🔟 Final Integration Model
+
+**Execution Rules:**
+
+* If `try` block executes without exception, `catch` is completely skipped.
+* If exception occurs at `S1`, control jumps to `catch`. `S2`, `S3` are never executed (Skipped).
+* After `catch` block finishes, execution continues with statements following the `try-catch` structure.
+
+**Important Note:**
+
+* If no matching `catch` block is found, the JVM performs its default handling (Propagation/Abnormal Termination).
+
+---
+
+## 🔥 Final Conclusion of Module 2
+
+1. `try-catch` is the fundamental mechanism for **customized exception handling**.
+2. Only **risky code** (code that might throw an exception) should be inside the `try` block.
+3. Once an exception occurs, the remaining code in the `try` block is **skipped**.
+4. Multiple `catch` blocks allow for **specific handling** of different exception types.
+5. In multi-catch, the **child exception must come before the parent exception**.
+6. `printStackTrace()` is the most detailed way to view exception info.
+
+---

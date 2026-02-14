@@ -38,8 +38,8 @@ core-java/
 Explore our modules, each containing both explanatory notes and executable demonstration programs.
 
 ### 🛡️ [Exception Handling](notes/exception-handling/README.md)
-*   **Status**: ✅ Module 1, 2, 3 & 4 Completed
-*   **Themes**: `Try-Catch`, `finally`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`.
+*   **Status**: ✅ Module 1, 2, 3, 4 & 5 Completed
+*   **Themes**: `Try-Catch`, `finally`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`, `Custom Exceptions`, `Compile-Time Rules`.
 *   [**📜 View Notes & Programs →**](notes/exception-handling/README.md)
 
 ### 🧩 [OOPS Concepts](notes/oops/README.md)
