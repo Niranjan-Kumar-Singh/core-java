@@ -259,7 +259,7 @@ core-java/
 ## 📌 Author
 
 **Niranjan Kumar Singh**  
-📸 **Instagram**: [`niranjan._23`](https://www.instagram.com/niranjan._23)  
+📸 **Instagram**: [`niranjan.ks.in`](https://www.instagram.com/niranjan.ks.in)  
 Learning Core Java with focus on **clarity, depth, and correctness**.
 
 ---

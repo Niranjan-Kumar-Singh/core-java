@@ -47,6 +47,11 @@ Explore our modules, each containing both explanatory notes and executable demon
 *   **Themes**: `Encapsulation`, `Inheritance`, `Abstraction`, `Polymorphism`, `Coupling & Cohesion`.
 *   [**📜 View Notes & Programs →**](notes/oops/README.md)
 
+### 🧵 [Multithreading](notes/multithreading/README.md)
+*   **Status**: ✅ All 4 Parts Completed
+*   **Themes**: `Thread Life Cycle`, `Synchronization`, `Inter-thread Communication`, `Thread Safety`.
+*   [**📜 View Notes & Programs →**](notes/multithreading/README.md)
+
 ---
 
 ## 🛠 Tech Stack & Tools
@@ -63,7 +68,7 @@ Explore our modules, each containing both explanatory notes and executable demon
 ## 📌 About the Author
 
 **Niranjan Kumar Singh**  
-📸 **Instagram**: [`niranjan._23`](https://www.instagram.com/niranjan._23)  
+📸 **Instagram**: [`niranjan.ks.in`](https://www.instagram.com/niranjan.ks.in)  
 *Passionate about Java development, focusing on clarity, depth, and the "why" behind every line of code.*
 
 ---
