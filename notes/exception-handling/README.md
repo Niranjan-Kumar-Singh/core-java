@@ -18,19 +18,18 @@ core-java/
 │   └── 📁 com/corejava/exceptionhandling/
 │       ├── 📁 module1_intro_hierarchy/
 │       │   ├── 📄 ... (9 files)
-│       │   └── 📄 StackOverflowErrorDemo.java
 │       ├── 📁 module2_try_catch_usage/
 │       │   ├── 📄 ... (9 files)
-│       │   └── 📄 DuplicateCatchCompileErrorDemo.java
 │       ├── 📁 module3_finally_combinations/
 │       │   └── 📄 ... (8 files)
 │       ├── 📁 module4_throw_throws_propagation/
 │       │   └── 📄 ... (10 files)
 │       ├── 📁 module5_rules_custom/
 │       │   └── 📄 ... (11 files)
-│       └── 📁 module6_common_exceptions/
-│           ├── 📄 ... (16 files)
-│           └── 📄 DefensiveCodingBestPracticeDemo.java
+│       ├── 📁 module6_common_exceptions/
+│       │   └── 📄 ... (16 files)
+│       └── 📁 module7_java7_enhancements/
+│           └── 📄 ... (8 files)
 ├── 📁 notes/
 │   └── 📁 exception-handling/
 │       ├── 📝 module1-intro-hierarchy.md
@@ -39,6 +38,7 @@ core-java/
 │       ├── 📝 module4-throw-throws-propagation.md
 │       ├── 📝 module5-rules-custom.md
 │       ├── 📝 module6-common-exceptions.md
+│       ├── 📝 module7-java7-enhancements.md
 │       └── 📝 README.md
 └── 📝 README.md (Root)
 ```
@@ -47,92 +47,48 @@ core-java/
 
 ## 📘 Covered Topics
 
-### 🔹 Exception Handling – Module 1 (Completed)
-**Concepts covered:**
-* What is an Exception?
-* Runtime Stack Mechanism
-* Default Exception Handling
-* Exception Propagation
-* Exception Hierarchy
-* Checked vs Unchecked Exceptions
-* Fully Checked vs Partially Checked Exceptions
-* Throwable methods (`getMessage()`, `printStackTrace()`)
-* Stack trace order
-* Error vs Exception
+### �️ Exception Handling (Parts 1–20)
 
+### 🔹 Module 1: Basics & Hierarchy (**Parts 1–3**)
+*   **Part 1**: Introduction & Runtime Stack  
+*   **Part 2**: Default Exception Handling  
+*   **Part 3**: Exception Hierarchy & Types  
 📄 **Notes:** [module1-intro-hierarchy.md](module1-intro-hierarchy.md)
 
-### 🔹 Exception Handling – Module 2 (Completed)
-**Concepts covered:**
-* Customized Exception Handling using Try–Catch
-* Why Java introduced Try–Catch?
-* Risky Code & Handling Logic
-* Control Flow in Try–Catch (Cases 1–4)
-* Methods to print exception information (`printStackTrace()`, `toString()`, `getMessage()`)
-* Try with Multiple Catch Blocks
-* Catch Order Rule (Child first, Parent last)
-
+### 🔹 Module 2: Try-Catch Usage (**Parts 4–6**)
+*   **Part 4**: Customized Exception Handling  
+*   **Part 5**: Control Flow & Method Access  
+*   **Part 6**: Multiple Catch Blocks & Hierarchy  
 📄 **Notes:** [module2-try-catch-usage.md](module2-try-catch-usage.md)
  
- ### 🔹 Exception Handling – Module 3 (Completed)
- **Concepts covered:**
- * finally block definition and importance
- * Execution guarantee of finally
- * finally vs return statement (Interview cases)
- * Rare cases where finally does not execute
- * Difference between final, finally, and finalize()
- * Control Flow in try–catch–finally
- * Nested try–catch–finally
- * All possible combinations of try–catch–finally
- * Curly brace rules
- 
+ ### 🔹 Module 3: finally & Combinations (**Parts 7–9**)
+ *   **Part 7**: The finally Block  
+ *   **Part 8**: final vs finally vs finalize()  
+ *   **Part 9**: Control Flow & Combinations  
  📄 **Notes:** [module3-finally-combinations.md](module3-finally-combinations.md)
 
- ### 🔹 Exception Handling – Module 4 (Completed)
- **Concepts covered:**
- * Exception Propagation (Stack Unwinding Mechanism)
- * Who creates the Exception Object? (JVM vs Programmer)
- * What does an Exception Object contain?
- * throw keyword (Purpose, Rules, and unreachable statement)
- * throw null vs throw exception
- * throws keyword (Delegation, satisfy compiler)
- * throws Rules (Methods/Constructors only, Multiple exceptions)
- * Overriding Rule with throws (Child class broader exception rule)
- * Catch block compile-time rule for fully checked exceptions
- * throw vs throws comparison
- 
+ ### 🔹 Module 4: Propagation & Keywords (**Parts 10–12**)
+ *   **Part 10**: Exception Propagation  
+ *   **Part 11**: The throw Keyword  
+ *   **Part 12**: The throws Keyword  
  📄 **Notes:** [module4-throw-throws-propagation.md](module4-throw-throws-propagation.md)
 
- ### 🔹 Exception Handling – Module 5 (Completed)
- **Concepts covered:**
- * Compile-Time Rules in Exception Handling
- * Why Java enforces Checked Exceptions
- * Unreported Checked Exception rule
- * Unreachable catch blocks (Hierarchy order)
- * Catching fully checked exceptions rule
- * Duplicate catch blocks rule
- * Overriding checked exception rules (Polymorphism)
- * Invalid `throws` usage
- * Custom (User-Defined) Exceptions (Checked vs Unchecked)
- * Proper Constructor Design for Custom Exceptions
- * Real-world layered example (Banking)
- 
+ ### 🔹 Module 5: Rules & Custom Exceptions (**Parts 13–14**)
+ *   **Part 13**: Compile-Time Rules  
+ *   **Part 14**: Custom (User-Defined) Exceptions  
  📄 **Notes:** [module5-rules-custom.md](module5-rules-custom.md)
 
- ### 🔹 Exception Handling – Module 6 (Completed)
- **Concepts covered:**
- * Understanding JVM-Generated vs Programmatic Exceptions
- * Top 11 Common & Real-World Exceptions
- * `NullPointerException`, `ArrayIndexOutOfBoundsException`, `ClassCastException`
- * `StackOverflowError`, `OutOfMemoryError` (Stack vs Heap memory)
- * `NoClassDefFoundError` vs `ClassNotFoundException`
- * `ExceptionInInitializerError` (Static initialization failures)
- * `IllegalArgumentException`, `NumberFormatException`
- * `IllegalThreadStateException` (Thread lifecycle violations)
- * `AssertionError`
- * Production Debugging & Defensive Coding Strategies
- 
+ ### 🔹 Module 6: Common Failures (**Parts 15–17**)
+ *   **Part 15**: Understanding Runtime Failures  
+ *   **Part 16**: Exception Lifecycle & Hierarchy  
+ *   **Part 17**: Common Exception Classification  
  📄 **Notes:** [module6-common-exceptions.md](module6-common-exceptions.md)
+
+ ### 🔹 Module 7: Java 1.7 Enhancements (**Parts 18–20**)
+ *   **Part 18**: Historical Context  
+ *   **Part 19**: Try-With-Resources (TWR)  
+ *   **Part 20**: Multi-Catch & Precise Rethrow  
+ 📄 **Notes:** [module7-java7-enhancements.md](module7-java7-enhancements.md)
 
 ---
 
@@ -236,6 +192,20 @@ core-java/
  | [`DefensiveNullHandlingDemo`](../../src/com/corejava/exceptionhandling/module6_common_exceptions/DefensiveNullHandlingDemo.java) | Strategies for preventing `NullPointerException` through defensive checks. |
  | [`FailureClassificationDemo`](../../src/com/corejava/exceptionhandling/module6_common_exceptions/FailureClassificationDemo.java) | Classifying failures and choosing between checked vs. unchecked exceptions in production. |
  | [`DefensiveCodingBestPracticeDemo`](../../src/com/corejava/exceptionhandling/module6_common_exceptions/DefensiveCodingBestPracticeDemo.java) | Comprehensive examples of defensive coding strategies and production debugging. |
+
+### 🔹 Module 7: Java 1.7 Enhancements
+**Location:** `src/com/corejava/exceptionhandling/module7_java7_enhancements`
+
+| Class Name | Description |
+| :--- | :--- |
+| [`TryWithResourcesBasicDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/TryWithResourcesBasicDemo.java) | Demonstrates basic TWR syntax and automatic resource management. |
+| [`TryWithResourcesMultipleResourcesDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/TryWithResourcesMultipleResourcesDemo.java) | Shows LIFO closing order for multiple resources in TWR. |
+| [`CustomAutoCloseableDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/CustomAutoCloseableDemo.java) | Demonstrates implementing `AutoCloseable` for custom resource management. |
+| [`SuppressedExceptionDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/SuppressedExceptionDemo.java) | Detailed visualization of primary vs suppressed exceptions in TWR. |
+| [`MultiCatchDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/MultiCatchDemo.java) | Demonstrates single catch block for multiple exceptions. |
+| [`MultiCatchRestrictionsDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/MultiCatchRestrictionsDemo.java) | Shows restrictions (implicit final, hierarchy rules) in multi-catch. |
+| [`PreciseRethrowDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/PreciseRethrowDemo.java) | Demonstrates the Precise Rethrow enhancement in Java 1.7. |
+| [`PreciseRethrowBreakDemo`](../../src/com/corejava/exceptionhandling/module7_java7_enhancements/PreciseRethrowBreakDemo.java) | Shows how modifying the exception variable breaks precise rethrow. |
 
 ---
 

@@ -2,7 +2,7 @@
 
 ---
 
-## 1. Introduction to Exception Handling
+## 1️⃣ PART 1: INTRODUCTION & RUNTIME STACK
 
 An **Exception** is an **unexpected, unwanted event** that occurs during the **execution of a program** and disturbs the **normal flow of the program**.
 
@@ -11,7 +11,7 @@ An exception always occurs at **run-time**, not at compile-time.
 
 ---
 
-### Simple Real-Life Examples
+## 1.1 Simple Real-Life Examples
 
 * Tyre punctured while travelling<br>
 * Sleeping while listening to class<br>
@@ -19,7 +19,7 @@ An exception always occurs at **run-time**, not at compile-time.
 
 ---
 
-### Java Examples
+## 1.2 Java Examples
 
 * Dividing a number by zero → `ArithmeticException`<br>
 * Accessing invalid array index → `ArrayIndexOutOfBoundsException`<br>
@@ -36,13 +36,13 @@ An exception always occurs at **run-time**, not at compile-time.
 
 ---
 
-### What is Exception Handling?
+## 1.3 What is Exception Handling?
 
 **Exception Handling** is a mechanism to handle **runtime abnormal situations** so that the program terminates **gracefully** instead of **abnormally**.
 
 ---
 
-### Main Objective of Exception Handling
+## 1.4 Main Objective of Exception Handling
 
 The **main objective** of exception handling is **GRACEFUL TERMINATION** of the program.
 
@@ -96,7 +96,7 @@ Exception handling improves:
 
 ---
 
-## 2. Runtime Stack Mechanism
+## 1.5 Runtime Stack Mechanism
 
 ### What is a Thread?
 
@@ -104,7 +104,7 @@ A **Thread** is a **path of execution** inside a Java program.
 
 ---
 
-### What is Runtime Stack?
+## 1.6 What is Runtime Stack?
 
 For every thread, JVM creates **one separate Runtime Stack**.
 
@@ -116,7 +116,7 @@ The **Runtime Stack** is a memory area used to:
 
 ---
 
-### Stack Frame / Activation Record
+## 1.7 Stack Frame / Activation Record
 
 Every method call performed by a thread is stored in the Runtime Stack as an entry called:
 
@@ -245,9 +245,11 @@ This process is called **Exception Propagation**.
 
 ---
 
-## 3. Default Exception Handling in Java
+---
 
-### What is Default Exception Handling?
+## 2️⃣ PART 2: DEFAULT EXCEPTION HANDLING
+
+## 2.1 What is Default Exception Handling?
 
 **Default Exception Handling** is the mechanism provided by the **JVM** to handle exceptions **when the programmer does not handle them explicitly**.
 
@@ -261,7 +263,7 @@ The **method in which the exception occurs** is responsible for **creating the e
 
 ---
 
-### What Does the Exception Object Contain?
+## 2.2 What Does the Exception Object Contain?
 
 When an exception occurs, the exception object contains:
 
@@ -298,7 +300,7 @@ Represents the sequence of method calls that led to the exception.
 
 ---
 
-### Default Exception Output Format
+## 2.3 Default Exception Output Format
 
 ```text
 Exception in thread "thread-name" ExceptionName : Description
@@ -395,7 +397,9 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 
 ---
 
-## 4. Exception Hierarchy
+---
+
+## 3️⃣ PART 3: EXCEPTION HIERARCHY & TYPES
 
 ### Root of Java Exception Hierarchy
 
@@ -445,7 +449,7 @@ Hence, the order of methods displayed in the stack trace represents the **sequen
 
 ---
 
-## 4.1 Exception Class
+## 3.1 Exception Class
 
 ### Definition
 
@@ -457,7 +461,7 @@ An **Exception** represents **application-level abnormal conditions** caused due
 
 ---
 
-### Characteristics of Exception
+## 3.1.1 Characteristics of Exception
 
 * Caused by application logic<br>
 * Mostly **recoverable**<br>
@@ -466,7 +470,7 @@ An **Exception** represents **application-level abnormal conditions** caused due
 
 ---
 
-### Categories of Exception
+## 3.1.2 Categories of Exception
 
 The `Exception` class has **two major categories**:
 
@@ -478,7 +482,7 @@ Exception
 
 ---
 
-### RuntimeException
+## 3.1.3 RuntimeException
 
 `RuntimeException` represents **programming mistakes**.
 
@@ -513,7 +517,7 @@ try {
 
 ---
 
-### Examples of Exception
+## 3.1.5 Examples of Exception
 
 * `FileNotFoundException`<br>
 * `IOException`<br>
@@ -522,7 +526,7 @@ try {
 
 ---
 
-### Handling Exceptions
+## 3.1.6 Handling Exceptions
 
 Exceptions should be handled using:
 
@@ -531,7 +535,7 @@ Exceptions should be handled using:
 
 ---
 
-## 4.2 Error Class
+## 3.2 Error Class
 
 ### Definition
 
@@ -539,7 +543,7 @@ An **Error** represents **serious system-level or JVM-level problems** that occu
 
 ---
 
-### Characteristics of Error
+## 3.2.2 Characteristics of Error
 
 * Not caused by programmer mistakes<br>
 * Caused due to lack of system resources<br>
@@ -549,7 +553,7 @@ An **Error** represents **serious system-level or JVM-level problems** that occu
 
 ---
 
-### Examples of Error
+## 3.2.3 Examples of Error
 
 * `OutOfMemoryError`
 * `StackOverflowError`
@@ -578,7 +582,7 @@ Hence, catching Error is meant only for logging or shutdown, not for recovery.
 
 ---
 
-### Exception vs Error
+## 3.2.4 Exception vs Error
 
 | Aspect       | Exception                 | Error                      |
 | ------------ | ------------------------- | -------------------------- |
@@ -590,7 +594,7 @@ Hence, catching Error is meant only for logging or shutdown, not for recovery.
 
 ---
 
-## 4.3. Complete Throwable Hierarchy (Reference)
+## 3.3. Complete Throwable Hierarchy (Reference)
 
 ```
 java.lang.Object
@@ -648,9 +652,9 @@ java.lang.Object
 
 ---
 
-## 4.4. Checked vs Unchecked Exceptions
+### Checked vs Unchecked Exceptions
 
-## 4.4.1 Checked Exceptions
+## 3.4.1 Checked Exceptions
 
 ### Definition
 
@@ -700,7 +704,7 @@ The compiler checks checked exceptions because:
 
 ---
 
-## 4.4.2 Unchecked Exceptions
+## 3.4.2 Unchecked Exceptions
 
 ### Definition
 
@@ -737,7 +741,7 @@ The compiler does not check unchecked exceptions because:
 
 ---
 
-## 4.4.3 Runtime vs Compile-Time
+## 3.4.3 Runtime vs Compile-Time
 
 ### Important Truth
 
@@ -759,7 +763,7 @@ handling rules are checked at **compile-time** for checked exceptions.
 
 ---
 
-## 4.4.4 Fully Checked vs Partially Checked Exceptions
+## 3.4.4 Fully Checked vs Partially Checked Exceptions
 
 ### Fully Checked Exception
 

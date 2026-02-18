@@ -2,11 +2,11 @@
 
 ---
 
-## 2️⃣1️⃣ Compile-Time Rules in Exception Handling
+## 1️⃣3️⃣ PART 13: COMPILE-TIME RULES
 
 ---
 
-### 🔹 Why Java Enforces Compile-Time Exception Rules
+## 13.1 Why Java Enforces Compile-Time Exception Rules
 
 Java follows a strongly typed, contract-based, and safety-oriented design philosophy.
 
@@ -109,7 +109,7 @@ Therefore, Java does not force handling or declaration of unchecked exceptions.
 
 ---
 
-### Rule 1️⃣: Unreported Checked Exception
+### Rule 13.1: Unreported Checked Exception
 
 **When It Occurs**
 
@@ -159,7 +159,7 @@ public static void main(String[] args) throws InterruptedException {
 
 ---
 
-### Rule 2️⃣: Unreachable Catch Block (Wrong Order)
+### Rule 13.2: Unreachable Catch Block (Wrong Order)
 
 **When It Occurs**
 
@@ -195,7 +195,7 @@ catch (Exception e)
 
 ---
 
-### Rule 3️⃣: Catching Fully Checked Exception Without Possibility
+### Rule 13.3: Catching Fully Checked Exception Without Possibility
 
 **Example**
 
@@ -227,7 +227,7 @@ Because Exception includes unchecked exceptions, and the compiler cannot guarant
 
 ---
 
-### Rule 4️⃣: Duplicate Catch Block
+### Rule 13.4: Duplicate Catch Block
 
 ```java
 try {
@@ -241,7 +241,7 @@ try {
 
 ---
 
-### Rule 5️⃣: Overriding Checked Exception Rule
+### Rule 13.5: Overriding Checked Exception Rule
 
 **Parent**
 
@@ -275,7 +275,7 @@ This rule exists to preserve the **Liskov Substitution Principle (LSP)** in obje
 
 ---
 
-### 🔸 Rule 6️⃣: Invalid throws Usage (Compile-Time Errors)
+### Rule 13.6: Invalid throws Usage (Compile-Time Errors)
 
 The throws keyword has strict syntactical and type rules.
 If these rules are violated, the compiler produces an error.
@@ -440,11 +440,11 @@ It must follow:
 
 ---
 
-## 2️⃣2️⃣ Custom (User-Defined) Exceptions
+## 1️⃣4️⃣ PART 14: CUSTOM (USER-DEFINED) EXCEPTIONS
 
 ---
 
-### 🔹 Why Custom Exceptions Are Needed
+## 14.1 Why Custom Exceptions Are Needed
 
 Built-in exceptions are generic:
 
@@ -470,11 +470,11 @@ Custom exceptions provide:
 
 ---
 
-### 🔹 Types of Custom Exceptions
+## 14.2 Types of Custom Exceptions
 
 ---
 
-### 1️⃣ Checked Custom Exception
+### 14.1 Checked Custom Exception
 
 Extend Exception.
 
@@ -495,7 +495,7 @@ Use when:
 
 ---
 
-### 2️⃣ Unchecked Custom Exception
+### 14.2 Unchecked Custom Exception
 
 Extend RuntimeException.
 
@@ -519,7 +519,7 @@ Most modern frameworks prefer unchecked custom exceptions.
 
 ---
 
-### 🔹 Proper Constructor Design
+## 14.3 Proper Constructor Design
 
 Best practice:
 
@@ -553,7 +553,7 @@ This supports:
 
 ---
 
-### 🔹 Real-World Layered Example (Banking)
+## 14.4 Real-World Layered Example (Banking)
 
 ```java
 class InsufficientBalanceException extends RuntimeException {
@@ -584,7 +584,7 @@ User → Service → BankAccount → throw → Propagation → Handler
 
 ---
 
-### 🔹 Best Practices
+## 14.5 Best Practices for Custom Exceptions
 
 ✔ Prefer extending RuntimeException for business logic<br>
 ✔ Do not extend Error<br>
@@ -597,7 +597,7 @@ User → Service → BankAccount → throw → Propagation → Handler
 
 ---
 
-## 🔟 Final Integration Model
+## 🧱 Final Integration Model
 
 **Compile-Time Phase:**
 
@@ -615,7 +615,7 @@ User → Service → BankAccount → throw → Propagation → Handler
 
 ---
 
-## 🔥 Final Conclusion of Module 5
+## 🏆 Final Conclusion
 
 1. Compiler enforces safety rules for checked exceptions.
 2. Catch order matters.

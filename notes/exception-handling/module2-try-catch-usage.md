@@ -1,12 +1,12 @@
-# 📘 Module 2: Core Exception Handling (try–catch)
+# MODULE 2: CORE EXCEPTION HANDLING (TRY–CATCH)
 
 ---
 
-## 5️⃣ Customized Exception Handling using Try–Catch
+## 4️⃣ PART 4: CUSTOMIZED EXCEPTION HANDLING
 
 ---
 
-## 🔹 What Exactly Is an Exception?
+## 4.1 What Exactly Is an Exception?
 
 An **exception** is a **runtime problem** that occurs during program execution and **disrupts the normal flow of the program**.
 
@@ -18,7 +18,7 @@ An **exception** is a **runtime problem** that occurs during program execution a
 
 ---
 
-## 🔹 When Do Exceptions Occur?
+## 4.2 When Do Exceptions Occur?
 
 Exceptions may occur due to invalid operations such as:
 
@@ -31,7 +31,7 @@ Exceptions may occur due to invalid operations such as:
 
 ---
 
-## 🔹 Why Java Introduced Try–Catch?
+## 4.3 Why Java Introduced Try–Catch?
 
 ### Without Try–Catch
 
@@ -51,7 +51,7 @@ Exceptions may occur due to invalid operations such as:
 
 ---
 
-## 🔹 What Is Exception Handling?
+## 4.4 What Is Exception Handling?
 
 **Exception handling** is the process of handling runtime errors in such a way that the **normal execution of the program is not interrupted**.
 
@@ -65,7 +65,7 @@ Exceptions may occur due to invalid operations such as:
 
 ---
 
-## 🔹 Risky Code
+## 4.5 Risky Code
 
 **Risky code** is the code that **may cause an exception at runtime**.
 
@@ -86,7 +86,7 @@ Only risky code should be placed inside the try block.
 
 ---
 
-## 🔹 Try–Catch Syntax
+## 4.6 Try–Catch Syntax
 
 ```java
 try {
@@ -98,7 +98,7 @@ try {
 
 ---
 
-## 🔹 JVM Internals
+## 4.7 JVM Internals
 
 1. JVM executes the `try` block line by line  
 2. If an exception occurs:
@@ -185,9 +185,11 @@ Statement 3
 
 ---
 
-## 6️⃣ Control Flow in Try–Catch
+---
 
-### General Structure
+## 5️⃣ PART 5: CONTROL FLOW & METHOD ACCESS
+
+## 5.1 General Structure
 
 ```java
 try {
@@ -263,7 +265,7 @@ S1
 
 ---
 
-## 7️⃣ Methods to Print Exception Information
+## 5.2 Methods to Print Exception Information
 
 The **Throwable** class provides methods to display exception details.
 
@@ -355,7 +357,9 @@ Internally, the **Default Exception Handler** uses `printStackTrace()` to print 
 
 ---
 
-## 8️⃣ Try with Multiple Catch Blocks
+---
+
+## 6️⃣ PART 6: MULTIPLE CATCH BLOCKS & HIERARCHY
 
 Different exceptions require **different handling strategies**.
 
@@ -393,7 +397,7 @@ try {
 
 ---
 
-## 📌 Catch Order Rule
+## 6.1 Catch Order Rule
 
 👉 **Child exception first, parent exception last**
 

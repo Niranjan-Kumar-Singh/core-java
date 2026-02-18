@@ -38,19 +38,16 @@ core-java/
 Explore our modules, each containing both explanatory notes and executable demonstration programs.
 
 ### 🛡️ [Exception Handling](notes/exception-handling/README.md)
-*   **Status**: ✅ Module 1, 2, 3, 4, 5 & 6 Completed
-*   **Themes**: `Try-Catch`, `finally`, `Hierarchy`, `Checked vs Unchecked`, `Propagation`, `Multiple Catch`, `Custom Exceptions`, `Compile-Time Rules`.
-*   [**📜 View Notes & Programs →**](notes/exception-handling/README.md)
+*   **Status**: ✅ All 7 Modules (20 Parts) Completed
+*   **Themes**: `Try-With-Resources`, `Multi-Catch`, `Precise Rethrow`, `Custom Exceptions`, `Hierarchy`, `Propagation`, `Rules`.
+*   [**📜 View Notes & Programs (20 Parts) →**](notes/exception-handling/README.md)
 
 ### 🧩 [OOPS Concepts](notes/oops/README.md)
 *   **Status**: ✅ Core, Inheritance, Polymorphism, Design completed.
 *   **Themes**: `Encapsulation`, `Inheritance`, `Abstraction`, `Polymorphism`, `Coupling & Cohesion`.
 *   [**📜 View Notes & Programs →**](notes/oops/README.md)
 
-### 🧵 [Multithreading](notes/multithreading/README.md)
-*   **Status**: ✅ All 4 Parts Completed
-*   **Themes**: `Thread Life Cycle`, `Synchronization`, `Inter-thread Communication`, `Thread Safety`.
-*   [**📜 View Notes & Programs →**](notes/multithreading/README.md)
+---
 
 ---
 

@@ -1,12 +1,12 @@
-# 📘 MODULE 4: Exception Propagation & Keywords
+# MODULE 4: EXCEPTION PROPAGATION & KEYWORDS
 
 ---
 
-## 1️⃣4️⃣ Exception Propagation (Stack Unwinding Mechanism)
+## 1️⃣0️⃣ PART 10: EXCEPTION PROPAGATION
 
 ---
 
-### 🔹 Definition of Exception Propagation
+## 10.1 Definition of Exception Propagation
 
 Exception Propagation is the systematic process by which an exception object, once created inside a method, is transferred from that method to its caller method, and then upward through the runtime call stack, until a matching exception handler (catch block) is found.
 
@@ -14,7 +14,7 @@ If no matching handler is found in the entire call stack, the JVM’s Default Ex
 
 ---
 
-### 🔹 Connection with Runtime Stack (From Module 1)
+## 10.2 Connection with Runtime Stack
 
 Every thread in Java has:
 
@@ -38,7 +38,7 @@ This entire removal process is called:
 
 ---
 
-### 🔹 Who Creates the Exception Object?
+## 10.3 Who Creates the Exception Object?
 
 There are exactly two cases.
 
@@ -109,7 +109,7 @@ So:
 
 ---
 
-### 🔹 What Does an Exception Object Contain?
+## 10.4 What Does an Exception Object Contain?
 
 An exception object contains:
 
@@ -123,17 +123,19 @@ Stack trace is captured at the time the exception object is created, not when pr
 
 ---
 
-## 1️⃣5️⃣ throw Keyword
+---
+
+## 1️⃣1️⃣ PART 11: THE THROW KEYWORD
 
 ---
 
-### 🔹 Definition of throw
+## 11.1 Definition of throw
 
 The throw keyword is a Java keyword used inside a method body to explicitly create and hand over an exception object to the JVM’s exception handling mechanism, thereby forcing abnormal termination of the current method and initiating exception propagation.
 
 ---
 
-### 🔹 Why Do We Require throw?
+## 11.2 Why Do We Require throw?
 
 JVM automatically throws exceptions only when it detects technical runtime violations such as:
 
@@ -169,7 +171,7 @@ Therefore:
 
 ---
 
-### 🔹 Purpose of throw
+## 11.3 Purpose of throw
 
 We use throw to:
 
@@ -180,7 +182,7 @@ We use throw to:
 
 ---
 
-### 🔹 Internal Working of throw
+## 11.4 Internal Working of throw
 
 ```
 Programmer creates exception object
@@ -197,7 +199,7 @@ If not found → stack unwinding continues
 
 ---
 
-### 🔹 Rules of throw
+## 11.5 Rules of throw
 
 ---
 
@@ -274,17 +276,19 @@ throw interrupts normal control flow.
 
 ---
 
-## 1️⃣6️⃣ throws Keyword
+---
+
+## 1️⃣2️⃣ PART 12: THE THROWS KEYWORD
 
 ---
 
-### 🔹 Definition of throws
+## 12.1 Definition of throws
 
 The throws keyword is used in method or constructor declaration to declare that the method may generate one or more exceptions and that the responsibility for handling those exceptions is delegated to the caller of the method.
 
 ---
 
-### 🔹 Why Do We Require throws?
+## 12.2 Why Do We Require throws?
 
 Java enforces a compile-time rule for checked exceptions.
 
@@ -301,7 +305,7 @@ If a method may produce a checked exception and does not handle it, it must decl
 
 ---
 
-### 🔹 What throws Does NOT Do
+## 12.3 What throws Does NOT Do
 
 - It does NOT throw the exception.  
 - It does NOT handle the exception.  
@@ -338,7 +342,7 @@ must be caught or declared to be thrown
 
 ---
 
-### 🔹 Rules of throws
+## 12.4 Rules of throws
 
 ---
 
@@ -455,7 +459,7 @@ Unchecked exceptions (RuntimeException and Error) have no such restriction becau
 
 ---
 
-## 1️⃣7️⃣ Catch Block Compile-Time Rule
+### Catch Block Compile-Time Rule
 
 If try block has no possibility of fully checked exception:
 
@@ -486,7 +490,7 @@ Exception is partially checked.
 
 ---
 
-## 1️⃣8️⃣ throw vs throws
+### throw vs throws
 
 | Feature          | throw       | throws             |
 | ---------------- | ----------- | ------------------ |

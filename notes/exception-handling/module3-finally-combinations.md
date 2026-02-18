@@ -1,10 +1,10 @@
-# 📘 Module 3: finally & Control Flow
+# MODULE 3: FINALLY & CONTROL FLOW
 
 ---
 
-# 9️⃣ finally Block
+## 7️⃣ PART 7: THE FINALLY BLOCK
 
-## 🔹 Definition
+## 7.1 Definition
 
 The **finally block** is a block associated with a `try` statement that is used to execute **cleanup code**, and it is executed whether an exception occurs or not.
 
@@ -14,7 +14,7 @@ In simple words:
 
 ---
 
-## 🔹 Why finally Is Needed
+## 7.2 Why finally Is Needed
 
 In real-world applications, we often:
 
@@ -37,7 +37,7 @@ The finally block ensures that cleanup happens.
 
 ---
 
-## 🔹 Basic Syntax
+## 7.3 Basic Syntax
 
 ```java
 try {
@@ -51,7 +51,7 @@ try {
 
 ---
 
-## 🔹 Execution Guarantee of finally
+## 7.4 Execution Guarantee of finally
 
 The finally block executes in all of these situations:
 
@@ -71,7 +71,7 @@ It does NOT execute only in rare cases:
 
 ---
 
-## 🔹 Important Interview Case: finally Overriding return
+## 7.5 Important Interview Case: finally Overriding return
 
 ```java
 class Demo {
@@ -99,7 +99,7 @@ class Demo {
 
 ---
 
-## 🔹 Example 1: No Exception
+## 7.6 Example 1: No Exception
 
 ```java
 try {
@@ -118,7 +118,7 @@ Finally executed
 
 ---
 
-## 🔹 Example 2: Exception Handled
+## 7.7 Example 2: Exception Handled
 
 ```java
 try {
@@ -139,7 +139,7 @@ Cleanup code executed
 
 ---
 
-## 🔹 Example 3: Exception Not Handled
+## 7.8 Example 3: Exception Not Handled
 
 ```java
 try {
@@ -160,13 +160,15 @@ Even if exception is not handled, finally executes.
 
 ---
 
-# 🔟 Difference Between final, finally, finalize()
+---
+
+## 8️⃣ PART 8: FINAL VS FINALLY VS FINALIZE
 
 These three words look similar but are completely different concepts.
 
 ---
 
-## 1️⃣ final
+## 8.1 final
 
 ### Definition
 
@@ -211,7 +213,7 @@ Example: `String` class is final.
 
 ---
 
-## 2️⃣ finally
+## 8.2 finally
 
 ### Definition
 
@@ -223,7 +225,7 @@ Example: `String` class is final.
 
 ---
 
-## 3️⃣ finalize()
+## 8.3 finalize()
 
 ### Definition
 
@@ -258,7 +260,9 @@ protected void finalize() throws Throwable {
 
 ---
 
-# 1️⃣1️⃣ Control Flow in try–catch–finally
+---
+
+## 9️⃣ PART 9: CONTROL FLOW & COMBINATIONS
 
 ## General Structure
 
@@ -304,7 +308,7 @@ S3 → Program terminates
 
 ---
 
-# 1️⃣2️⃣ Nested try–catch–finally
+## 9.1 Nested try–catch–finally
 
 Java allows nesting of try blocks.
 
@@ -325,9 +329,9 @@ try {
 
 ---
 
-# 1️⃣3️⃣ All Possible Combinations of try–catch–finally
+### All Possible Combinations of try–catch–finally
 
-## 🔹 Core Syntax Rules
+## 9.2 Core Syntax Rules
 
 1. `try` must be followed by at least one `catch` OR one `finally` OR both.<br>
 2. `catch` cannot exist without `try`.<br>
@@ -339,7 +343,7 @@ try {
 
 ---
 
-## ✅ VALID COMBINATIONS
+## 9.3 Valid & Invalid Combinations
 
 ### 1️⃣ try + catch
 
